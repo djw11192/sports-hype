@@ -1,0 +1,28 @@
+#main {
+  margin-top: 6em;
+}
+
+#content {
+  margin-top: 3em;
+}
+
+.boxes {
+  width: 200px;
+  height: 200px;
+  background: green;
+  display: inline-block;
+  margin: 2px;
+  text-align: center;
+  position:relative;
+}
+.board{
+  margin: 0 auto;
+  width: 650px;
+}
+
+.moleBox{
+  position: absolute;
+  font-size: 58px;
+  top: 90px;
+  right: 80px;
+}
