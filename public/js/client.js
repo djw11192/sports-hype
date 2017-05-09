@@ -1,6 +1,13 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 window.client = (function () {
+
+
+  //functions below are from another activity for reference/////
+
+  function getTweets(teams){
+    
+  }
   function getTimers(success) {
     return fetch('/api/timers', {
       headers: {

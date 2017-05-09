@@ -2,6 +2,9 @@
   eslint-disable react/prefer-stateless-function, react/jsx-boolean-value,
   no-undef, jsx-a11y/label-has-for, react/jsx-first-prop-new-line
 */
+
+/* This file is used for examples using React*/
+
 class TimersDashboard extends React.Component {
   state = {
     timers: [],
