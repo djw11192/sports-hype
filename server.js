@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 
 const DATA_FILE = path.join(__dirname, 'data.json');
+const TWEET_DATA = path.join(__dirname, 'tweet-data.json');
 
 app.set('port', (process.env.PORT || 3000));
 
@@ -27,6 +28,13 @@ app.get('/api/timers', (req, res) => {
     res.json(JSON.parse(data));
   });
 });
+
+app.get('/api/tweets', (req, res) => {
+  fs.readFile(TWEET_DATA, (err, data) =>{
+    res.setHeader('Cache-Control', 'no-cache');
+    res.json(JSON.parse(data));
+  })
+})
 
 app.post('/api/timers', (req, res) => {
   fs.readFile(DATA_FILE, (err, data) => {

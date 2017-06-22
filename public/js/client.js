@@ -5,9 +5,16 @@ window.client = (function () {
 
   //functions below are from another activity for reference/////
 
-  function getTweets(teams){
-    
+  function getArticles(success){
+    return fetch('/api/tweets', {
+      headers: {
+        Accept: 'application/json',
+      }
+    }).then(checkStatus)
+      .then(parseJSON)
+      .then(success);
   }
+
   function getTimers(success) {
     return fetch('/api/timers', {
       headers: {
@@ -90,6 +97,7 @@ window.client = (function () {
   }
 
   return {
+    getArticles,
     getTimers,
     createTimer,
     updateTimer,
